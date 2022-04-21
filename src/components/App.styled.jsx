@@ -1,13 +1,16 @@
 import styled from 'styled-components';
 
-export const Title = styled.p`
+export const SectionTitle = styled.section`
   font-weight: 700;
   font-size: 24px;
-  margin: 24px 0;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0 0 0;
 `;
 
 export const ButtonList = styled.ul`
   display: inline-flex;
+  margin-top: 24px;
 `;
 
 export const Button = styled.button`
@@ -20,7 +23,15 @@ export const Button = styled.button`
   border-radius: 5px;
 `;
 
-export const StatList = styled.li`
+export const StatListItem = styled.li`
   text-transform: capitalize;
   margin: 3px;
+
+  &:first-of-type {
+    margin-top: 24px;
+  }
+`;
+
+export const Msg = styled.p`
+  margin-top: 24px;
 `;
