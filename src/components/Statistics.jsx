@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import PropTypes from 'prop-types';
 import { StatListItem } from './App.styled';
 import { Notification } from './Notification';
 
@@ -31,3 +32,9 @@ export class Statistics extends Component {
     );
   }
 }
+
+Statistics.propTypes = {
+  total: PropTypes.number.isRequired,
+  positivePercentage: PropTypes.oneOfType([PropTypes.number, PropTypes.bool]),
+  stats: PropTypes.object.isRequired,
+};
